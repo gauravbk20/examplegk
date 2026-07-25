@@ -1,0 +1,13 @@
+steps:
+  - name : 'ubuntu'
+    entrypoint: 'sh'
+    args: 
+      - '-c' 
+      - |
+            echo "PROJ_ID: $PROJECT_ID"
+            echo "CloudBuild success REPOSITORY_NAME: $REPO_NAME  BRANCH:  $BRANCH_NAME   Commid_id: $COMMIT_SHA"
+
+options:
+  #logging: CLOUD_LOGGING_ONLY
+  #logging: NONE
+logsBucket: gs://gkdevops
