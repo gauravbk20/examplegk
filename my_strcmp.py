@@ -1,10 +1,9 @@
 import sys
 
-weather="sunny"
 def my_strcmp():
   wethr="null"
   wethr = sys.argv[1:]
-  if wethr.lower() == weather:
+  if wethr.lower() == "sunny":
       print("Wow u matched the weather compare variable now go play")
   elif wethr.lower() == "cloudy":
       print("the weather is cloudy take your umbrella")
@@ -13,4 +12,5 @@ def my_strcmp():
   else:
       print("take it easy and go for a walk if its not raining")
 
-my_strcmp() "SUNny"
+
+my_strcmp("SUNny") 
