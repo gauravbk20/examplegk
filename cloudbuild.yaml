@@ -1,13 +1,12 @@
 steps:
-  - name : 'ubuntu'
-    entrypoint: 'sh'
+  - name : 'python3.13'
+    entrypoint: 'bash'
     args: 
       - '-c' 
       - |
-            echo "PROJ_ID: $PROJECT_ID"
-            echo "CloudBuild success REPOSITORY_NAME: $REPO_NAME  BRANCH:  $BRANCH_NAME   Commid_id: $COMMIT_SHA"
+            echo "PROJ_ID: $PROJECT_ID starting and executing my_strcmp.py"
+            python my_strcmp.py sunny
+            echo "completed my_strcmp.py"
 
 options:
-  #logging: CLOUD_LOGGING_ONLY
-  #logging: NONE
-logsBucket: gs://gkdevops
+  logging: CLOUD_LOGGING_ONLY
